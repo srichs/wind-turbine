@@ -1,0 +1,54 @@
+<!---
+Filename: wind_turbine.html
+Date: 20 Feb 2020
+
+Purpose: This is the html file for creating a wind turbine. This project uses the
+    Three.js library to render a 3D graphics scene in a browser using javascript.
+
+Author: Scott Richards
+Version: 0.1.1
+--->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wind Turbine</title> <!--- Tab Title --->
+    <script src="three.min.js"></script> <!--- https://github.com/mrdoob/three.js/blob/master/build/three.min.js --->
+    <script src="TrackballControls.js"></script> <!--- https://github.com/mrdoob/three.js/blob/master/examples/js/controls/TrackballControls.js --->
+    <script src="WindTurbine.js"></script> <!--- Javascript File that builds and animates the scene --->
+</head>
+
+<body onload="init()">
+    <h2>Wind Turbine Generator Using Three.js</h2> <!--- Page Title --->
+
+    <p><b>
+        Use the Arrow and Page Keys to Move the Model.<br>
+        Use the Mouse to Move the Camera.
+    </b></p>
+
+    <div id="canvas-holder"> <!--- Sets up the Canvas --->
+        <canvas id="glcanvas" width="640" height="480" style="background-color:black"></canvas>
+    </div><br>
+
+    <div style="float:left; margin-left:1.5cm">
+        <p>
+            <span style="float:left;"><b>Lighting</b><br><br> <!--- Checkbox Controls for the Lighting --->
+                <label><input type="checkbox" id="light1">Above Light</label><br>
+                <label><input type="checkbox" id="light2">Viewpoint Light</label><br>
+                <label><input type="checkbox" id="light3">Ambient Light</label><br>
+                <label><input type="checkbox" id="light4">Red Light</label><br>
+            </span>
+
+            <span style="float:left; margin-left:1.5cm"><b>Animation</b><br><br> <!--- Animation Controls --->
+                <button style="margin-left: 0px" type="button" id="anim1">Play</button>
+                <button style="margin-left: 20px" type="button" id="anim2">Stop</button>
+            </span>
+
+            <span style="float:left; margin-left:1.5cm"><b>Rotation Speed</b><br><br> <!--- Animation Speed Controls --->
+                <input type="range" min="10" max="300" value="50" id="range1">
+            </span>
+        </p>
+    </div>
+</body>
+
+</html>
