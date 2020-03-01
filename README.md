@@ -12,5 +12,5 @@ This application uses the three.js 3D JavaScript library and there are two main 
 - [TrackballControls.js](https://github.com/mrdoob/three.js/blob/master/examples/js/controls/TrackballControls.js)
   
 
-![image.png](image.png)
+![image.png](/image.png)
 
